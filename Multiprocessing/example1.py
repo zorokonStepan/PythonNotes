@@ -1,5 +1,5 @@
-import multiprocessing
 import os
+import multiprocessing
 
 
 def whoami(what):
