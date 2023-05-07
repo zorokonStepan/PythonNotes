@@ -1,7 +1,9 @@
-def fact(n):
-    if n == 1:
+def fact(num):
+    if num < 0:
+        return None
+    if num in (0, 1):
         return 1
-    return fact(n - 1) * n
+    return fact(num - 1) * num
 
 
 if __name__ == "__main__":
