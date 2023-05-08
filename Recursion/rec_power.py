@@ -9,4 +9,5 @@ def power(x, n):
         return power(x, (n - 1)) * x
 
 
-print(power(2, -10))
+if __name__ == "__main__":
+    assert power(2, -10) == 0.0009765625
