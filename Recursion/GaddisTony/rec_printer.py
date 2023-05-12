@@ -42,4 +42,4 @@ if __name__ == "__main__":
     assert rec_printer(1, '2') == "args must be <class 'int'>, but given <class 'str'>"
     assert rec_printer(1, 3.1) == "args must be <class 'int'>, but given <class 'float'>"
 
-    rec_printer(2, 250)
+    rec_printer(-100, 100)
