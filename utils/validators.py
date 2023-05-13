@@ -13,15 +13,17 @@ def is_valid_count_args(count_args: int):
     return decorator
 
 
-def is_valid_type_args(func):
-    @wraps(func)
-    def wrapper(*args):
-        for arg in args:
-            type_arg = type(arg)
-            if type_arg != int:
-                return f"args must be <class 'int'>, but given {type_arg}"
-        return func(*args)
-    return wrapper
+def is_valid_type_args(input_type_arg):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args):
+            for arg in args:
+                type_arg = type(arg)
+                if type_arg != input_type_arg:
+                    return f"args must be {input_type_arg}, but given {type_arg}"
+            return func(*args)
+        return wrapper
+    return decorator
 
 
 def is_valid_priority(func):

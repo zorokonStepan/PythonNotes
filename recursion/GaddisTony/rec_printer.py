@@ -2,7 +2,7 @@ from utils.validators import is_valid_count_args, is_valid_type_args, is_valid_p
 
 
 @is_valid_count_args(2)
-@is_valid_type_args
+@is_valid_type_args(int)
 @is_valid_priority
 def rec_printer(start: int, stop: int):
     if start == stop:
