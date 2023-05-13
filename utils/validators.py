@@ -14,6 +14,7 @@ def is_valid_count_args(count_args: int):
 
 
 def is_valid_type_args(func):
+    @wraps(func)
     def wrapper(*args):
         for arg in args:
             type_arg = type(arg)
@@ -24,6 +25,7 @@ def is_valid_type_args(func):
 
 
 def is_valid_priority(func):
+    @wraps(func)
     def wrapper(*args):
         if args[0] > args[1]:
             return 'No valid priority of args'
